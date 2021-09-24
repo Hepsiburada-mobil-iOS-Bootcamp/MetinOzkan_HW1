@@ -41,6 +41,8 @@ class AlgorithmViewController: UIViewController {
     
     @IBAction func duplicationAction(_ sender: Any) {
         // call required test function
+        
+        algorithmManager.duplicateTest()
     }
     
     @IBAction func mergeArrayAction(_ sender: Any) {

@@ -107,12 +107,19 @@ class AlgoruthmManager: AlgorithmProtocol {
      Output: false
      */
     func duplicateTest() {
-        
+        print(containsDuplicate([1,2,3,1]))
     }
     
-//    func containsDuplicate(_ nums: [Int]) -> Bool {
-//            
-//    }
+    func containsDuplicate(_ nums: [Int]) -> Bool {
+        let uniqueData=Set(nums)
+    
+        if uniqueData.count==nums.count{
+            return false
+        }
+
+        else {return true}
+        
+   }
     
     // MARK: - Merge Sorted Array
     /*
