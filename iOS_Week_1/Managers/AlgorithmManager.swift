@@ -25,10 +25,20 @@ class AlgoruthmManager: AlgorithmProtocol {
         let result = twoSum(nums, target)
         print("result : \(result)")
     }
-    
+    var firstIndex:Int = 0
+    var secondIndex:Int = 0
     private func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
         // I solved of the question for you guys :D :D :D
-        return [0, 1]
+      
+        for i in 0...nums.count-1{
+            for k in 0...nums.count-1{
+                if nums[i]+nums[k]==target{
+                    firstIndex=i
+                    secondIndex=k
+                }
+            }
+        }
+        return [firstIndex,secondIndex]
     }
     
     // MARK: - IsPalindrome

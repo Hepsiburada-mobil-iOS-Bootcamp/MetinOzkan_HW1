@@ -9,7 +9,7 @@ import UIKit
 
 class AlgorithmViewController: UIViewController {
     
-    private var algorithmManager: AlgorithmProtocol!
+    private var algorithmManager: AlgorithmProtocol=AlgoruthmManager()
 
     convenience init(algorithmManager: AlgorithmProtocol) {
         self.init()
@@ -20,14 +20,18 @@ class AlgorithmViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+
     }
     
     @IBAction func twoSumAction(_ sender: Any) {
         // algorithmManager.twoSumTest()
+        algorithmManager.twoSumTest()
+    
     }
     
     @IBAction func isPalindromAction(_ sender: Any) {
         // call required test function
+
     }
     
     @IBAction func AnagramAction(_ sender: Any) {
