@@ -49,12 +49,32 @@ class AlgoruthmManager: AlgorithmProtocol {
      Explanation: "amanaplanacanalpanama" is a palindrome.
      */
     func isPalindromTest() {
+        let string1: String = "A man, a plan, a canal: Panama"
+        let string2:String="considering only alphanumeric"
+        print("\(string1.lowercased())  \(isPalindrome(string1) ? "is a palindrome": "is not a palindrome") ")
+        print("\(string2.lowercased())  \(isPalindrome(string2) ? "is a palindrome": "is not a palindrome") ")
         
     }
     
-//    func isPalindrome(_ s: String) -> Bool {
-//
-//    }
+    func isPalindrome(_ s: String) -> Bool {
+        
+        let pattern = "[^A-Za-z0-9]+"
+        let filteredText = s.replacingOccurrences(of: pattern, with: "", options: [.regularExpression])
+        
+        
+        let lowercasedText:String=filteredText.lowercased()
+
+        let reversedText:String=String(lowercasedText.reversed())
+        
+        if lowercasedText==reversedText{
+            return true
+        }
+     
+        return false
+
+        
+
+    }
     
     // MARK: - Valid Anagram
     /*
@@ -139,4 +159,11 @@ class AlgoruthmManager: AlgorithmProtocol {
 //    }
     
     
+}
+extension String
+{
+    func trim() -> String
+   {
+    return self.trimmingCharacters(in: NSCharacterSet.whitespaces)
+   }
 }
