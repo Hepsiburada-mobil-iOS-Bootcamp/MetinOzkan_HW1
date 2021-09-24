@@ -167,12 +167,21 @@ class AlgoruthmManager: AlgorithmProtocol {
 
      */
     func missingNumberTest() {
-        
+        print(missingNumber([0,1,2,3,5,6,7,8,9]))
     }
     
-//    private func missingNumber(_ nums: [Int]) -> Int {
-//
-//    }
+    private func missingNumber(_ nums: [Int]) -> Int {
+        var sortNumbers=nums.sorted();
+        
+        for i in 0..<sortNumbers.count{
+            if(i==sortNumbers[i]){
+                continue
+            }
+            else {return i}
+            
+        }
+        return 0
+    }
     
     
 }
